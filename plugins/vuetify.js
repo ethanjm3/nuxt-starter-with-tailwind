@@ -4,11 +4,11 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
 
-/*const myCustomDarkTheme = {
+const myCustomDarkTheme = {
   dark: true,
   colors: {
-    background: '#45484A',
-    surface: '#808689',
+    background: '#07B35A',//'#45484A',
+    surface: '#07B35A',//'#808689',
     primary: '#07B35A',
     'primary-darken-1': '#068644',
     secondary: '#919263',
@@ -19,18 +19,18 @@ import * as directives from 'vuetify/directives'
     warning: '#EA7A0B',
   }
 }
-*/
+
 export default defineNuxtPlugin(nuxtApp => {
   const vuetify = createVuetify({
     ssr: true,
     components,
     directives,
-    //theme: {
-     // defaultTheme: 'myCustomDarkTheme',
-     // themes: {
-     //   myCustomDarkTheme,
-     // }
-    //},
+    theme: {
+     defaultTheme: 'myCustomDarkTheme',
+     themes: {
+      myCustomDarkTheme,
+     }
+    },
   })
 
   nuxtApp.vueApp.use(vuetify)
