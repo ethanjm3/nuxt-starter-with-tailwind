@@ -12,7 +12,10 @@
     "@supabase/supabase-js": "^2.10.0",
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.2.3",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "sass": "^1.51.0",
+    "vuetify": "^3.1.8"
+  },
+  "dependencies": {
+    "fontawesome": "^5.6.3"
   }
 }

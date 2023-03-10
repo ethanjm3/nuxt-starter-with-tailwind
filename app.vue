@@ -12,10 +12,13 @@ tabledata = test
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">
+  <h1>
     Hello world!
   </h1>
   <li v-for= 'items in tabledata'>
     {{items.test_data}} {{items.primary_key}} {{items.Number}}
   </li>
+  <v-btn>
+  Button
+</v-btn>
 </template>
