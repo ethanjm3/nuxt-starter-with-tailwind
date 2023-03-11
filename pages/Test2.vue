@@ -1,5 +1,5 @@
 <script setup>
-/*import {createClient} from '@supabase/supabase-js'
+import {createClient} from '@supabase/supabase-js'
 const url = process.env.SUPABASE_URL;
 const key = process.env.SUPABASE_KEY;
 const supabase = createClient(url,key)
@@ -8,18 +8,11 @@ let { data: test, error } = await supabase
   .from('test')
   .select('*')
 tabledata = test
-*/
 </script>
+
 <template>
-<div>
+<div>THis is Test 2
 
-
-<!--
-  <li v-for= 'items in tabledata'>
-    {{items.test_data}} {{items.primary_key}} {{items.Number}}
-  </li>
--->
-Test
-<v-btn>Button</v-btn>
+{{tabledata[0].Number}}
 </div>
 </template>
