@@ -33,6 +33,7 @@
   <v-sheet>Nav Test</v-sheet>
 </v-navigation-drawer>
 
+
  <v-main class="ma-2">
  <NuxtPage/>
  </v-main>
