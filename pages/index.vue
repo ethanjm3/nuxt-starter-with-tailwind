@@ -1,26 +1,26 @@
 <script setup>
-/*
-import {createClient} from '@supabase/supabase-js'
-const url = process.env.SUPABASE_URL;
-const key = process.env.SUPABASE_KEY;
-const supabase = createClient(url,key)
-var tabledata = ref()
-let { data: test, error } = await supabase
-  .from('test')
-  .select('*')
-tabledata = test
-*/
+
+const client = useSupabaseClient()
+
+const { data: tabledata } = await useAsyncData('testnum2', async () => {
+  const { data } = await client.from('test').select('*')
+  return data})
+
 </script>
 <template>
 <div>
 
 
-<!--
-  <li v-for= 'items in tabledata'>
-    {{items.test_data}} {{items.primary_key}} {{items.Number}}
-  </li>
--->
+
 Test
-<v-btn>Button</v-btn>
+<v-divider class="border-opacity-50"></v-divider>
+<v-btn class="ma-2">Button</v-btn>
+
+<!--
+{{tabledata}}
+-->
+<li v-for="item in tabledata" class="">
+  {{ item.Number }} : {{item.primary_key}} : {{item.test_data}}
+</li>
 </div>
 </template>
