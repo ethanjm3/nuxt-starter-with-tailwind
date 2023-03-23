@@ -5,11 +5,16 @@ const url = process.env.SUPABASE_URL;
 const key = process.env.SUPABASE_KEY;
 const supabase = createClient(url,key)
 var tabledata = ref()
-let { data: test, error } = await supabase
+const getdatasb = async () => {
+const { data: test } = await supabase
   .from('test')
   .select('*')
-tabledata = test
+tabledata.value = test
+}
+onMounted(getdatasb)
 */
+
+
 </script>
 
 <template>
