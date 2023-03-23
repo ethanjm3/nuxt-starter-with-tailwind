@@ -1,26 +1,18 @@
 <script setup>
-/*
-import {createClient} from '@supabase/supabase-js'
-const url = process.env.SUPABASE_URL;
-const key = process.env.SUPABASE_KEY;
-const supabase = createClient(url,key)
-var tabledata = ref()
-const getdatasb = async () => {
-const { data: test } = await supabase
-  .from('test')
-  .select('*')
-tabledata.value = test
-}
-onMounted(getdatasb)
-*/
 
+const client = useSupabaseClient()
+
+const { data: testing } = await useAsyncData('testosterone', async () => {
+  const { data } = await client.from('test').select('*')
+  return data
+})
 
 </script>
 
 <template>
 <div>This is Test 2
-<!--
-{{tabledata[0].Number}}
--->
+
+{{testing[0].Number}}
+
 </div>
 </template>
