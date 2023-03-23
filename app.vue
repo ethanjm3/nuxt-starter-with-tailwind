@@ -12,15 +12,11 @@
   </template>
 </v-app-bar>
 <v-navigation-drawer permanent elevation:1 location="left" class="d-flex align-center pa-4">
-  <NuxtLink to="account">
-      Account page
-  </NuxtLink>
-  <NuxtLink to="/">
-      Index page
-  </NuxtLink>
-  <NuxtLink to="Test2">
-      Test2 page
-  </NuxtLink>
+  <NuxtLink to="account">Account Page</NuxtLink>
+  <v-divider class="border-opacity-50"></v-divider>
+  <NuxtLink to="/">Index Page</NuxtLink>
+  <v-divider class="border-opacity-50"></v-divider>
+  <NuxtLink to="Test2">Test2 page</NuxtLink>
   <v-divider class="border-opacity-50"></v-divider>
   <v-sheet>Nav Test</v-sheet>
   <v-divider class="border-opacity-50"></v-divider>
