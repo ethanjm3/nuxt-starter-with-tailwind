@@ -18,15 +18,8 @@
   <v-divider class="border-opacity-50"></v-divider>
   <NuxtLink to="Test2">Test2 page</NuxtLink>
   <v-divider class="border-opacity-50"></v-divider>
-  <v-sheet>Nav Test</v-sheet>
+  <NuxtLink to="Dashboard">Dashboard page</NuxtLink>
   <v-divider class="border-opacity-50"></v-divider>
-  <v-sheet>Nav Test</v-sheet>
-  <v-divider class="border-opacity-50"></v-divider>
-  <v-sheet>Nav Test</v-sheet>
-  <v-divider class="border-opacity-50"></v-divider>
-  <v-sheet>Nav Test</v-sheet>
-  <v-divider class="border-opacity-50"></v-divider>
-  <v-sheet>Nav Test</v-sheet>
 </v-navigation-drawer>
 
 
